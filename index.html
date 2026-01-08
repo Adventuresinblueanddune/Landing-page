@@ -3,125 +3,256 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Children’s Coloring Book – Morocco</title>
+<title>Children’s Coloring Book</title>
+
 <style>
-body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#222;}
-header {background:linear-gradient<header>
-  <h1 data-lang="en">Coloring Adventures Inspired by Morocco</h1>
-  <!-- Your other headings -->
-  
-  <!-- Cover Image -->
-  <img src="https://imgur.com/gallery/coloring-bz96OWV#E13dywP" alt="Moroccan Coloring Book Cover" style="width:100%;max-width:400px;margin:auto;display:block;">
-  
-</header>
-.lang {position:absolute;top:10px;right:10px;}
-.lang button {margin:2px;padding:6px 10px;border:none;border-radius:4px;cursor:pointer;}
-section {max-width:1000px;margin:auto;padding:50px 20px;}
-.hidden {display:none;}
-.cta {background:#1e88e5;color:white;text-align:center;padding:50px 20px;}
-form input, form textarea {width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:1px solid #ccc;}
-form button {width:100%;padding:12px;background:#f9a825;color:#1e88e5;border:none;border-radius:5px;font-weight:bold;cursor:pointer;}
-[dir="rtl"] {direction:rtl;text-align:right;}
-footer {text-align:center;padding:20px;color:#777;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #1e88e5, #f9a825);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  padding: 15px;
+  background: #f5f5f5;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+img.cover {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.cta {
+  background: #1e88e5;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* Language handling */
+.lang-section {
+  display: none;
+}
+
+.lang-section.active {
+  display: block;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
 </style>
 </head>
+
 <body>
 
-<!-- Language Buttons -->
-<div class="lang">
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('fr')">FR</button>
-  <button onclick="setLang('ar')">AR</button>
-  <button onclick="setLang('es')">ES</button>
-</div>
+<!-- LANGUAGE BUTTONS -->
+<nav>
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('ar')">العربية</button>
+  <button onclick="switchLang('es')">Español</button>
+</nav>
 
-<!-- Header -->
+<!-- ================= ENGLISH ================= -->
+<div id="en" class="lang-section active" dir="ltr">
+
 <header>
-  <h1 data-lang="en">Coloring Adventures Inspired by Morocco</h1>
-  <h1 data-lang="fr" class="hidden">Aventures de coloriage inspirées du Maroc</h1>
-  <h1 data-lang="ar" class="hidden">مغامرات التلوين المستوحاة من المغرب</h1>
-  <h1 data-lang="es" class="hidden">Aventuras para colorear inspiradas en Marruecos</h1>
-  <p data-lang="en">Educational coloring books for children ages 4–10, perfect for schools and families.</p>
-  <p data-lang="fr" class="hidden">Livres de coloriage éducatifs pour les enfants de 4 à 10 ans, parfaits pour les écoles et les familles.</p>
-  <p data-lang="ar" class="hidden">كتب تلوين تعليمية للأطفال من سن 4 إلى 10، مثالية للمدارس والعائلات.</p>
-  <p data-lang="es" class="hidden">Libros de colorear educativos para niños de 4 a 10 años, ideales para escuelas y familias.</p>
+  <h1>Coloring Adventures Inspired by Morocco</h1>
+  <p>Educational coloring books for children ages 4–10</p>
 </header>
 
-<!-- Features Section -->
 <section>
-  <h2 data-lang="en">Why This Coloring Book?</h2>
-  <h2 data-lang="fr" class="hidden">Pourquoi ce livre de coloriage ?</h2>
-  <h2 data-lang="ar" class="hidden">لماذا هذا الكتاب؟</h2>
-  <h2 data-lang="es" class="hidden">¿Por qué este libro para colorear?</h2>
+  <img class="cover" src="https://i.imgur.com/E13dywP.jpeg" alt="Coloring Book Cover">
 
-  <div class="features" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
-    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
-      <h3 data-lang="en">For Children (4–10)</h3>
-      <h3 data-lang="fr" class="hidden">Pour les enfants (4–10 ans)</h3>
-      <h3 data-lang="ar" class="hidden">للأطفال (4–10 سنوات)</h3>
-      <h3 data-lang="es" class="hidden">Para niños (4–10 años)</h3>
-      <p data-lang="en">Bold outlines and clear shapes make coloring fun and easy.</p>
-      <p data-lang="fr" class="hidden">Des contours nets et des formes claires pour faciliter le coloriage.</p>
-      <p data-lang="ar" class="hidden">خطوط واضحة وأشكال بسيطة تجعل التلوين ممتعًا وسهلاً.</p>
-      <p data-lang="es" class="hidden">Contornos definidos y formas claras hacen que colorear sea fácil y divertido.</p>
+  <div class="features">
+    <div class="box">
+      <h3>Child-Friendly Design</h3>
+      <p>Bold outlines, simple shapes, perfect for ages 4–10.</p>
     </div>
-
-    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
-      <h3 data-lang="en">Culturally Inspired</h3>
-      <h3 data-lang="fr" class="hidden">Inspiré de la culture</h3>
-      <h3 data-lang="ar" class="hidden">مستوحى من الثقافة</h3>
-      <h3 data-lang="es" class="hidden">Inspirado en la cultura</h3>
-      <p data-lang="en">Subtle Moroccan patterns, architecture, animals, and landscapes.</p>
-      <p data-lang="fr" class="hidden">Motifs marocains subtils, architecture, animaux et paysages.</p>
-      <p data-lang="ar" class="hidden">نقوش مغربية بسيطة، العمارة، الحيوانات والمناظر الطبيعية.</p>
-      <p data-lang="es" class="hidden">Patrones marroquíes sutiles, arquitectura, animales y paisajes.</p>
+    <div class="box">
+      <h3>Moroccan Inspiration</h3>
+      <p>Architecture, animals, cities, and landscapes with subtle cultural details.</p>
     </div>
-
-    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
-      <h3 data-lang="en">School-Friendly</h3>
-      <h3 data-lang="fr" class="hidden">Adapté aux écoles</h3>
-      <h3 data-lang="ar" class="hidden">ملائم للمدارس</h3>
-      <h3 data-lang="es" class="hidden">Ideal para escuelas</h3>
-      <p data-lang="en">Perfect for private schools, art programs, and cultural activities.</p>
-      <p data-lang="fr" class="hidden">Parfait pour les écoles privées, programmes artistiques et activités culturelles.</p>
-      <p data-lang="ar" class="hidden">مثالي للمدارس الخاصة، برامج الفنون، والأنشطة الثقافية.</p>
-      <p data-lang="es" class="hidden">Perfecto para escuelas privadas, programas artísticos y actividades culturales.</p>
+    <div class="box">
+      <h3>Ideal for Schools</h3>
+      <p>Great for private schools, art classes, and cultural programs.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
 <section class="cta">
-  <h2 data-lang="en">Request Information or Samples</h2>
-  <h2 data-lang="fr" class="hidden">Demandez des informations ou des échantillons</h2>
-  <h2 data-lang="ar" class="hidden">اطلب معلومات أو عينات</h2>
-  <h2 data-lang="es" class="hidden">Solicite información o muestras</h2>
-
-  <!-- Zoho Form Embed -->
-  <iframe src="https://forms.zohopublic.com/YOUR_ZOHO_FORM_LINK/formperma/YOUR_FORM_ID/formperma.html" style="border:none;width:100%;height:600px;"></iframe>
+  <h2>Request Information or Samples</h2>
+  <iframe src="https://forms.zohopublic.com/adminsecu1/form/SecuMaroc/formperma/PjX7ElCTV1DK83qO5Y9oxnMBisbdq8eOsUJ-wCU_3Bk"
+    style="border:none;width:100%;height:600px;"></iframe>
 </section>
 
+</div>
+
+<!-- ================= FRENCH ================= -->
+<div id="fr" class="lang-section" dir="ltr">
+
+<header>
+  <h1>Aventures de coloriage inspirées du Maroc</h1>
+  <p>Livres de coloriage éducatifs pour enfants de 4 à 10 ans</p>
+</header>
+
+<section>
+  <img class="cover" src="https://i.imgur.com/E13dywP.jpeg" alt="Couverture livre coloriage">
+
+  <div class="features">
+    <div class="box">
+      <h3>Adapté aux enfants</h3>
+      <p>Contours épais et formes simples pour un coloriage facile.</p>
+    </div>
+    <div class="box">
+      <h3>Inspiration marocaine</h3>
+      <p>Villes, animaux, paysages et motifs culturels subtils.</p>
+    </div>
+    <div class="box">
+      <h3>Parfait pour les écoles</h3>
+      <p>Idéal pour écoles privées et activités artistiques.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Demander des informations</h2>
+  <iframe src="https://forms.zohopublic.com/adminsecu1/form/SecuMaroc/formperma/PjX7ElCTV1DK83qO5Y9oxnMBisbdq8eOsUJ-wCU_3Bk"
+    style="border:none;width:100%;height:600px;"></iframe>
+</section>
+
+</div>
+
+<!-- ================= ARABIC ================= -->
+<div id="ar" class="lang-section" dir="rtl">
+
+<header>
+  <h1>مغامرات التلوين المستوحاة من المغرب</h1>
+  <p>كتب تلوين تعليمية للأطفال من 4 إلى 10 سنوات</p>
+</header>
+
+<section>
+  <img class="cover" src="https://i.imgur.com/E13dywP.jpeg" alt="غلاف كتاب التلوين">
+
+  <div class="features">
+    <div class="box">
+      <h3>تصميم مناسب للأطفال</h3>
+      <p>خطوط واضحة وأشكال بسيطة تناسب الأطفال.</p>
+    </div>
+    <div class="box">
+      <h3>لمسة مغربية</h3>
+      <p>مدن، حيوانات، مناظر طبيعية وتفاصيل ثقافية بسيطة.</p>
+    </div>
+    <div class="box">
+      <h3>مناسب للمدارس</h3>
+      <p>مثالي للمدارس الخاصة والأنشطة الفنية.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>طلب معلومات أو عينات</h2>
+  <iframe src="https://forms.zohopublic.com/adminsecu1/form/SecuMaroc/formperma/PjX7ElCTV1DK83qO5Y9oxnMBisbdq8eOsUJ-wCU_3Bk"
+    style="border:none;width:100%;height:600px;"></iframe>
+</section>
+
+</div>
+
+<!-- ================= SPANISH ================= -->
+<div id="es" class="lang-section" dir="ltr">
+
+<header>
+  <h1>Aventuras para colorear inspiradas en Marruecos</h1>
+  <p>Libros educativos para niños de 4 a 10 años</p>
+</header>
+
+<section>
+  <img class="cover" src="https://i.imgur.com/E13dywP.jpeg" alt="Portada libro para colorear">
+
+  <div class="features">
+    <div class="box">
+      <h3>Diseño infantil</h3>
+      <p>Líneas gruesas y formas simples para colorear fácilmente.</p>
+    </div>
+    <div class="box">
+      <h3>Inspiración marroquí</h3>
+      <p>Ciudades, animales y paisajes con detalles culturales.</p>
+    </div>
+    <div class="box">
+      <h3>Ideal para escuelas</h3>
+      <p>Perfecto para colegios privados y programas artísticos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Solicitar información</h2>
+  <iframe src="https://forms.zohopublic.com/adminsecu1/form/SecuMaroc/formperma/PjX7ElCTV1DK83qO5Y9oxnMBisbdq8eOsUJ-wCU_3Bk"
+    style="border:none;width:100%;height:600px;"></iframe>
+</section>
+
+</div>
+
 <footer>
-  <p data-lang="en">© 2026 – Moroccan Children’s Coloring Book Project</p>
-  <p data-lang="fr" class="hidden">© 2026 – Projet de livres de coloriage pour enfants marocains</p>
-  <p data-lang="ar" class="hidden">© 2026 – مشروع كتب تلوين للأطفال في المغرب</p>
-  <p data-lang="es" class="hidden">© 2026 – Proyecto de libros para colorear para niños de Marruecos</p>
+  © 2026 – Children’s Moroccan Coloring Book Project
 </footer>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.classList.add('hidden');
+function switchLang(lang) {
+  document.querySelectorAll('.lang-section').forEach(section => {
+    section.classList.remove('active');
   });
-  document.querySelectorAll('[data-lang="'+lang+'"]').forEach(el => {
-    el.classList.remove('hidden');
-  });
-  if(lang === 'ar') {
-    document.body.setAttribute('dir','rtl');
-  } else {
-    document.body.setAttribute('dir','ltr');
-  }
+  document.getElementById(lang).classList.add('active');
 }
 </script>
+
 </body>
 </html>
