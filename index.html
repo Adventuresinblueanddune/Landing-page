@@ -1,28 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 { font-size: 2rem; }
-    p { opacity: 0.8; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Children’s Coloring Book – Morocco</title>
+<style>
+body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#222;}
+header {background:linear-gradient<header>
+  <h1 data-lang="en">Coloring Adventures Inspired by Morocco</h1>
+  <!-- Your other headings -->
+  
+  <!-- Cover Image -->
+  <img src="https://imgur.com/gallery/coloring-bz96OWV#E13dywP" alt="Moroccan Coloring Book Cover" style="width:100%;max-width:400px;margin:auto;display:block;">
+  
+</header>
+.lang {position:absolute;top:10px;right:10px;}
+.lang button {margin:2px;padding:6px 10px;border:none;border-radius:4px;cursor:pointer;}
+section {max-width:1000px;margin:auto;padding:50px 20px;}
+.hidden {display:none;}
+.cta {background:#1e88e5;color:white;text-align:center;padding:50px 20px;}
+form input, form textarea {width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:1px solid #ccc;}
+form button {width:100%;padding:12px;background:#f9a825;color:#1e88e5;border:none;border-radius:5px;font-weight:bold;cursor:pointer;}
+[dir="rtl"] {direction:rtl;text-align:right;}
+footer {text-align:center;padding:20px;color:#777;}
+</style>
 </head>
 <body>
-  <div>
-    <h1>Website Coming Soon</h1>
-    <p>Your domain is correctly connected.</p>
+
+<!-- Language Buttons -->
+<div class="lang">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('fr')">FR</button>
+  <button onclick="setLang('ar')">AR</button>
+  <button onclick="setLang('es')">ES</button>
+</div>
+
+<!-- Header -->
+<header>
+  <h1 data-lang="en">Coloring Adventures Inspired by Morocco</h1>
+  <h1 data-lang="fr" class="hidden">Aventures de coloriage inspirées du Maroc</h1>
+  <h1 data-lang="ar" class="hidden">مغامرات التلوين المستوحاة من المغرب</h1>
+  <h1 data-lang="es" class="hidden">Aventuras para colorear inspiradas en Marruecos</h1>
+  <p data-lang="en">Educational coloring books for children ages 4–10, perfect for schools and families.</p>
+  <p data-lang="fr" class="hidden">Livres de coloriage éducatifs pour les enfants de 4 à 10 ans, parfaits pour les écoles et les familles.</p>
+  <p data-lang="ar" class="hidden">كتب تلوين تعليمية للأطفال من سن 4 إلى 10، مثالية للمدارس والعائلات.</p>
+  <p data-lang="es" class="hidden">Libros de colorear educativos para niños de 4 a 10 años, ideales para escuelas y familias.</p>
+</header>
+
+<!-- Features Section -->
+<section>
+  <h2 data-lang="en">Why This Coloring Book?</h2>
+  <h2 data-lang="fr" class="hidden">Pourquoi ce livre de coloriage ?</h2>
+  <h2 data-lang="ar" class="hidden">لماذا هذا الكتاب؟</h2>
+  <h2 data-lang="es" class="hidden">¿Por qué este libro para colorear?</h2>
+
+  <div class="features" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
+      <h3 data-lang="en">For Children (4–10)</h3>
+      <h3 data-lang="fr" class="hidden">Pour les enfants (4–10 ans)</h3>
+      <h3 data-lang="ar" class="hidden">للأطفال (4–10 سنوات)</h3>
+      <h3 data-lang="es" class="hidden">Para niños (4–10 años)</h3>
+      <p data-lang="en">Bold outlines and clear shapes make coloring fun and easy.</p>
+      <p data-lang="fr" class="hidden">Des contours nets et des formes claires pour faciliter le coloriage.</p>
+      <p data-lang="ar" class="hidden">خطوط واضحة وأشكال بسيطة تجعل التلوين ممتعًا وسهلاً.</p>
+      <p data-lang="es" class="hidden">Contornos definidos y formas claras hacen que colorear sea fácil y divertido.</p>
+    </div>
+
+    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
+      <h3 data-lang="en">Culturally Inspired</h3>
+      <h3 data-lang="fr" class="hidden">Inspiré de la culture</h3>
+      <h3 data-lang="ar" class="hidden">مستوحى من الثقافة</h3>
+      <h3 data-lang="es" class="hidden">Inspirado en la cultura</h3>
+      <p data-lang="en">Subtle Moroccan patterns, architecture, animals, and landscapes.</p>
+      <p data-lang="fr" class="hidden">Motifs marocains subtils, architecture, animaux et paysages.</p>
+      <p data-lang="ar" class="hidden">نقوش مغربية بسيطة، العمارة، الحيوانات والمناظر الطبيعية.</p>
+      <p data-lang="es" class="hidden">Patrones marroquíes sutiles, arquitectura, animales y paisajes.</p>
+    </div>
+
+    <div class="box" style="border:1px solid #eee;padding:20px;border-radius:10px;background:#fafafa;">
+      <h3 data-lang="en">School-Friendly</h3>
+      <h3 data-lang="fr" class="hidden">Adapté aux écoles</h3>
+      <h3 data-lang="ar" class="hidden">ملائم للمدارس</h3>
+      <h3 data-lang="es" class="hidden">Ideal para escuelas</h3>
+      <p data-lang="en">Perfect for private schools, art programs, and cultural activities.</p>
+      <p data-lang="fr" class="hidden">Parfait pour les écoles privées, programmes artistiques et activités culturelles.</p>
+      <p data-lang="ar" class="hidden">مثالي للمدارس الخاصة، برامج الفنون، والأنشطة الثقافية.</p>
+      <p data-lang="es" class="hidden">Perfecto para escuelas privadas, programas artísticos y actividades culturales.</p>
+    </div>
   </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <h2 data-lang="en">Request Information or Samples</h2>
+  <h2 data-lang="fr" class="hidden">Demandez des informations ou des échantillons</h2>
+  <h2 data-lang="ar" class="hidden">اطلب معلومات أو عينات</h2>
+  <h2 data-lang="es" class="hidden">Solicite información o muestras</h2>
+
+  <!-- Zoho Form Embed -->
+  <iframe src="https://forms.zohopublic.com/YOUR_ZOHO_FORM_LINK/formperma/YOUR_FORM_ID/formperma.html" style="border:none;width:100%;height:600px;"></iframe>
+</section>
+
+<footer>
+  <p data-lang="en">© 2026 – Moroccan Children’s Coloring Book Project</p>
+  <p data-lang="fr" class="hidden">© 2026 – Projet de livres de coloriage pour enfants marocains</p>
+  <p data-lang="ar" class="hidden">© 2026 – مشروع كتب تلوين للأطفال في المغرب</p>
+  <p data-lang="es" class="hidden">© 2026 – Proyecto de libros para colorear para niños de Marruecos</p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.add('hidden');
+  });
+  document.querySelectorAll('[data-lang="'+lang+'"]').forEach(el => {
+    el.classList.remove('hidden');
+  });
+  if(lang === 'ar') {
+    document.body.setAttribute('dir','rtl');
+  } else {
+    document.body.setAttribute('dir','ltr');
+  }
+}
+</script>
 </body>
 </html>
